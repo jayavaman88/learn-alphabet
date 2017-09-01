@@ -1,0 +1,21 @@
+.alphabets-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.card {
+  box-sizing: border-box;
+  display: flex;
+  border: 1px solid black;
+  padding: 25px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 18%;
+}
+
+.alphabet {
+  font-size: 5em;
+}
