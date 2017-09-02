@@ -1,7 +1,7 @@
 import React from 'react';
 import AlphabetCard from './AlphabetCard';
 
-import styles from './styles.css';
+import './styles.css';
 
 var alphabetList = [
   { letter: 'ក',
@@ -150,17 +150,12 @@ class Alphabet extends React.Component{
     // this will be called every time an audio file is loaded
     // we keep track of the loaded files vs the requested files
     // this.state.loaded++;
-    console.log('state', this.state)
     let newLoaded = this.state.loaded + 1;
 
     this.setState({ loaded: newLoaded });
 
-    console.log('loadedAudio', this.state.loaded);
-
     if (this.state.loaded == this.state.soundFiles.length){
-      console.log('all has loaded');
       // all have loaded
-    	// init();
     }
   }
 
