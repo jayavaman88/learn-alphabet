@@ -16,6 +16,10 @@
   width: 18%;
 }
 
+.card:hover, .card.highlight {
+  background-color: yellow;
+}
+
 .alphabet {
   font-size: 5em;
 }
