@@ -20,88 +20,88 @@ var alphabetList = [
     audio: '../../assets/NGO.mp3'
   },
   { letter: 'ច',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/CHAW.mp3'
   },
   { letter: 'ឆ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/CHHAW.mp3'
   },
   { letter: 'ជ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/CHO.mp3'
   },
   { letter: 'ឈ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/CHHO.mp3'
   },
   { letter: 'ញ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/NYO.mp3'
   },
   { letter: 'ដ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/DAW.mp3'
   },
   { letter: 'ឋ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/THAW.mp3'
   },
   { letter: 'ឌ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/DO.mp3'
   },
   { letter: 'ឍ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/THO.mp3'
   },
   { letter: 'ណ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/NAW.mp3'
   },
   { letter: 'ត',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/TAW.mp3'
   },
   { letter: 'ថ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/THAWW.mp3'
   },
   { letter: 'ទ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/TO.mp3'
   },
   { letter: 'ធ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/THOO.mp3'
   },
   { letter: 'ន',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/NO.mp3'
   },
   { letter: 'ប',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/BAW.mp3'
   },
   { letter: 'ផ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/PHAW.mp3'
   },
   { letter: 'ព',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/PO.mp3'
   },
   { letter: 'ភ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/PHO.mp3'
   },
   { letter: 'ម',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/MO.mp3'
   },
   { letter: 'យ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/YO.mp3'
   },
   { letter: 'រ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/RO.mp3'
   },
   { letter: 'ល',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/LOW.mp3'
   },
   { letter: 'វ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/VO.mp3'
   },
   { letter: 'ស',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/SAW.mp3'
   },
   { letter: 'ហ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/HAW.mp3'
   },
   { letter: 'ឡ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/LAW.mp3'
   },
   { letter: 'អ',
-    audio: '../../assets/KA.mp3'
+    audio: '../../assets/AW.mp3'
   },
 ]
 
@@ -218,8 +218,8 @@ class Alphabet extends React.Component{
    */
   shuffle(a) {
     for (let i = a.length; i; i--) {
-        let j = Math.floor(Math.random() * i);
-        [a[i - 1], a[j]] = [a[j], a[i - 1]];
+      let j = Math.floor(Math.random() * i);
+      [a[i - 1], a[j]] = [a[j], a[i - 1]];
     }
   }
 
@@ -242,9 +242,9 @@ class Alphabet extends React.Component{
       <div>
         <h3>The Khmer Consonants</h3>
         <audio id="player"></audio>
-        <button onClick={() => this.playAll()}>Play all</button>
-        <button onClick={() => this.stop()}>Stop</button>
-        <button onClick={() => this.randomize()}>Randomize</button>
+        <button className="btn btn-primary" onClick={() => this.playAll()}>Play all</button>
+        <button className="btn btn-primary" onClick={() => this.stop()}>Stop</button>
+        <button className="btn btn-primary" onClick={() => this.randomize()}>Randomize</button>
         <div className="alphabets-container">
           {alphabets.map((alphabet, id) => {
             return <AlphabetCard key={id} alphabet={alphabet.letter} className={this.isHighlighted(id, this.state.currentPlayedId)} handleClick={() => this.handleClick(alphabet.audio)}/>
